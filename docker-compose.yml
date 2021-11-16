@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  kafka.producer.api:
+    image: ${DOCKER_REGISTRY-}kafkaproducerapi
+    build:
+      context: .
+      dockerfile: src/Kafka.Producer.Api/Dockerfile
