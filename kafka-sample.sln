@@ -3,9 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kafka.Producer.Api", "src\Kafka.Producer.Api\Kafka.Producer.Api.csproj", "{12FF54E6-BCB3-4A89-9B66-F04105D939E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Producer.Api", "src\Kafka.Producer.Api\Kafka.Producer.Api.csproj", "{12FF54E6-BCB3-4A89-9B66-F04105D939E2}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D5ADF1D2-5600-46A4-B552-FA7585BA4DBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D15DB57E-2E6C-4D0B-990E-0D19C0C054EC}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kafka.Consumer.Api", "src\Kafka.Consumer.Api\Kafka.Consumer.Api.csproj", "{D492D336-DA4C-4193-95E8-0AFA02E6CC6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kafka.Common", "src\Kafka.Common\Kafka.Common.csproj", "{01D21B71-08A7-4D90-BA27-F0BCE467F995}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +30,14 @@ Global
 		{D5ADF1D2-5600-46A4-B552-FA7585BA4DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5ADF1D2-5600-46A4-B552-FA7585BA4DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5ADF1D2-5600-46A4-B552-FA7585BA4DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D492D336-DA4C-4193-95E8-0AFA02E6CC6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D492D336-DA4C-4193-95E8-0AFA02E6CC6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D492D336-DA4C-4193-95E8-0AFA02E6CC6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D492D336-DA4C-4193-95E8-0AFA02E6CC6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D21B71-08A7-4D90-BA27-F0BCE467F995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D21B71-08A7-4D90-BA27-F0BCE467F995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D21B71-08A7-4D90-BA27-F0BCE467F995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D21B71-08A7-4D90-BA27-F0BCE467F995}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

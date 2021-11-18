@@ -1,0 +1,1 @@
+CREATE STREAM RATINGS_STREAM(id varchar key, firstName varchar, lastName varchar) with (kafka_topic='ratings', value_format='json', partitions=1)

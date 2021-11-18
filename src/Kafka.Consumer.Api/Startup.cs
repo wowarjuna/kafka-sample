@@ -1,4 +1,4 @@
-using Kafka.Producer.Api.Application.Services;
+using Kafka.Consumer.Api.HostedService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Kafka.Producer.Api
+namespace Kafka.Consumer.Api
 {
     public class Startup
     {
@@ -30,10 +30,10 @@ namespace Kafka.Producer.Api
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Kafka.Producer.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Kafka.Consumer.Api", Version = "v1" });
             });
 
-            services.AddSingleton<KafkaProducerService>();
+            services.AddHostedService<KafkaBackgroundService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +43,7 @@ namespace Kafka.Producer.Api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Kafka.Producer.Api v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Kafka.Consumer.Api v1"));
             }
 
             app.UseRouting();
