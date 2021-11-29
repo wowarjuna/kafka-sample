@@ -40,13 +40,13 @@ namespace Kafka.Producer.Api.Application.Services
 
         public async Task SendMessage(User user)
         {
+           
             using (var schemaRegistry = new CachedSchemaRegistryClient(_registryConfig))
             {
-                using (var producer = new ProducerBuilder<Null, User>(_config)
-                    .SetValueSerializer(new JsonSerializer<User>(schemaRegistry))
+                using (var producer = new ProducerBuilder<Null, string>(_config)                   
                     .Build())
                 {
-                    await producer.ProduceAsync(_topic, new Message<Null, User> { Value = user });
+                    await producer.ProduceAsync(_topic, new Message<Null, string> { Value = JsonConvert.SerializeObject(user) });
                 }
             }
         }
